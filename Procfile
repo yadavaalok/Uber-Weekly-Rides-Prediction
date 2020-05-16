@@ -1,1 +1,1 @@
-web: gunicorn uber_rides:app
+web: gunicorn app:app
