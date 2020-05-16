@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Uber Rides Prediction</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+				body{
+			background-color: lime;
+		}
+
+		h1{
+			font-weight: 10px;
+			color: purple;
+		}
+
+		input[type=text]{
+			width: 50%;
+			height: 20px;
+			padding: 15px 22px;
+			margin: 10px 5px;
+			box-sizing: border-box;
+			color: red;
+			background-color: yellow;
+		}
+
+		button{
+			text-align: center;
+			border-radius: 10px;
+			font-size: 20px;
+
+		}
+	</style>
+</head>
+<body>
+	<h1>Uber Weekly Rides Analysis</h1>
+	<form action="{{url_for('predict')}}" method="POST">
+		<input type="text" name="Priceperweek" placeholder="Priceperweek" required="required"><br>
+		<input type="text" name="Population" placeholder="Population" required="required"><br>
+		<input type="text" name="Monthlyincome" placeholder="Monthlyincome" required="required"><br>
+		<input type="text" name="Averageparkingpermonth" placeholder="Averageparkingpermonth" required="required"><br>
+		<button type="submit" class="btn btn-primary btn-block btn-large">Predict</button><br>
+	</form>
+	<br>
+	<br>
+	{{prediction_text}}
+</body>
+</html>

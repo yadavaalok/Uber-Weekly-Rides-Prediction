@@ -1,0 +1,25 @@
+body{
+	background-color: lime;
+}
+
+h1{
+	font-weight: 10px;
+	color: purple;
+}
+
+input[type=text]{
+	width: 50%;
+	height: 20px;
+	padding: 15px 22px;
+	margin: 10px 5px;
+	box-sizing: border-box;
+	color: red;
+	background-color: yellow;
+}
+
+button{
+	text-align: center;
+	border-radius: 10px;
+	font-size: 20px;
+
+}
